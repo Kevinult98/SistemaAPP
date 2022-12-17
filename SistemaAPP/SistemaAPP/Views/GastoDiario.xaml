@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistemaAPP.Views.GastoDiario">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Padding="30,0,30,00" VerticalOptions="Center">
+
+                <Entry x:Name="TxtDescripcion" Placeholder="Descripcion" TextTransform="Lowercase" FontSize="Large" TextColor="Black" />
+
+                <Entry x:Name="TxtTotal" Placeholder="Total" TextTransform="Lowercase" FontSize="Large" TextColor="Black" />
+
+                <Picker x:Name="CboTipoGasto" Title="Tipo Gasto" TextColor="Black" ItemsSource="{Binding TipoGasto}" ItemDisplayBinding="{Binding Tipo}"></Picker>
+            </StackLayout>
+
+            <FlexLayout>
+
+                <StackLayout Padding="110,50,50,20" Spacing="10" Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Center">
+
+                    <Button x:Name="BtnRegister" WidthRequest="180" VerticalOptions="Center" Text="Guardar" CornerRadius="50"  BackgroundColor="Green" FontSize="Medium" BorderColor="Black" BorderWidth="1" Clicked="BtnRegister_Clicked"/>
+
+                    <Button x:Name="BtnCancel" WidthRequest="180" VerticalOptions="Center" Text="Cancelar" CornerRadius="50"  BackgroundColor="Green" FontSize="Medium" BorderColor="Black" BorderWidth="1" Clicked="BtnCancel_Clicked"/>
+
+                </StackLayout>
+            </FlexLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

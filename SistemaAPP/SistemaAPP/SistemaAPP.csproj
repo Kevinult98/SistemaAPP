@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+	  <LangVersion>10.0</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Models\ActividadDiarium.cs~RF2321d6da.TMP" />
+    <None Remove="Models\Equipo.cs~RF230b4bcb.TMP" />
+    <None Remove="Models\TipoUsuario.cs~RF119e76c5.TMP" />
+    <None Remove="Models\v2kh0lp3.4dj~" />
+    <None Remove="ViewModels\GastoVIewModel.cs~RF283d21d8.TMP" />
+    <None Remove="ViewModels\TipoUsuarioViewModel.cs~RF7a2c642a.TMP" />
+    <None Remove="ViewModels\VehiculoViewModel.cs~RF286e1cf7.TMP" />
+    <None Remove="Views\ActividadDiariaPage.xaml.cs~RF1903f881.TMP" />
+    <None Remove="Views\ActividadDiariaPage.xaml.cs~RF2873204a.TMP" />
+    <None Remove="Views\ListarActividadDiariaPage.xaml~RF231dd18e.TMP" />
+    <None Remove="Views\LoginPage.xaml~RF39296f8b.TMP" />
+    <None Remove="Views\UserRegisterPage.xaml~RF1e60b7c8.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="RestSharp" Version="108.0.3" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\ActionsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ActividadDiariaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\BitacoraPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\EquipoListarPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\GastoDiario.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\GastoDiarioListarPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ListarActividadDiariaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\UserRegisterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ViewUsers.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+</Project>

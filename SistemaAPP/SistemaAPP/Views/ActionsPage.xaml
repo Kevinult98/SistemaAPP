@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistemaAPP.Views.ActionsPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Label Text="Seleccionar Accion" 
+                       VerticalOptions="StartAndExpand" 
+                       HorizontalOptions="CenterAndExpand" 
+                       HorizontalTextAlignment="Center" 
+                       FontSize="40"/>
+                
+                <FlexLayout Wrap="Wrap" 
+                            JustifyContent="SpaceEvenly" 
+                            Direction="Row" 
+                            Padding="20,20,20,0"
+                            AlignContent="Start"
+                            BackgroundColor="Azure"
+                            Margin="0,50,0,0">
+                    
+                <Button x:Name="BtnViewUsers" 
+                        Text="Lista Usuarios" 
+                        BackgroundColor="Green"
+                        TextColor="White"
+                        WidthRequest="150"
+                        HeightRequest="150"
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        CornerRadius="30"  
+                        Margin="5,5,5,5"
+                        Clicked="BtnViewUsers_Clicked"/>
+
+                    <Button x:Name="BtnLabores" 
+                        Text="Registrar Actividad" 
+                        BackgroundColor="Green"
+                        TextColor="White"
+                        WidthRequest="150"
+                        HeightRequest="150"
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        CornerRadius="30"  
+                        Margin="5,5,5,5"
+                        Clicked="BtnLabores_Clicked"/>
+                   
+                    <Button x:Name="BtnEquipo" 
+                        Text="Ver Equipos" 
+                        BackgroundColor="Green"
+                        TextColor="White"
+                        WidthRequest="150"
+                        HeightRequest="150"
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        CornerRadius="30"  
+                        Clicked="BtnEquipo_Clicked"/>
+
+                    <Button x:Name="BtnSalir" 
+                        Text="Salir" 
+                        BackgroundColor="Green"
+                        TextColor="White"
+                        WidthRequest="150"
+                        HeightRequest="150"
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        CornerRadius="30"  
+                        Clicked="BtnSalir_Clicked"/>
+
+
+                </FlexLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

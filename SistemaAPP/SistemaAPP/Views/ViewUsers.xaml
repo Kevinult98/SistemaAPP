@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistemaAPP.Views.ViewUsers">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Lista Usuarios"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+
+                <ListView x:Name="LstUsers" RowHeight="300" Background="white">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ImageCell Text="{Binding NombreCompleto}" 
+                                       Detail="{Binding Email}"
+                                       DetailColor="Black"
+                                       TextColor="Black"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

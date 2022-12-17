@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SistemaAPP.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="grupoPineda.png"
+             NavigationPage.HasNavigationBar="False">
+    
+    <ContentPage.Content>
+        
+        <StackLayout Padding="50,0,50,00" VerticalOptions="Center">
+
+            <Entry x:Name="TxtUserName" Placeholder="Email" TextTransform="Lowercase" FontSize="Large" TextColor="Black" />
+
+            <StackLayout Padding="0,0,50,0" Orientation="Horizontal" Spacing="10">
+
+                <Entry x:Name="TxtPassword"  WidthRequest="240" Placeholder="Password" FontSize="Large" TextColor="Black" IsPassword="true" />
+
+                <Switch x:Name="SwSeePassword" IsToggled="False" Toggled="CmdSeePassword"/>
+   
+        
+            </StackLayout>
+
+            <Button x:Name="BtnLogin" VerticalOptions="Center" BackgroundColor="Green" Text="Login" Command="{Binding LoginCommand}" FontSize="Large" CornerRadius="50" TextColor="White" BorderColor="Black" BorderWidth="1" Clicked="BtnLogin_Clicked"/>
+
+            <Button x:Name="BtnRegister" VerticalOptions="Center" Text="Register" CornerRadius="50"  BackgroundColor="Green" FontSize="Medium" BorderColor="Black" BorderWidth="1" Clicked="CmdUserRegister"/>
+            
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

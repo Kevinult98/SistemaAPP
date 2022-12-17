@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistemaAPP.Views.UserRegisterPage">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Padding="30,0,30,00" VerticalOptions="Center">
+                <Entry x:Name="TxtUserName" Placeholder="Nombre Usuario" TextTransform="Lowercase" FontSize="Large" TextColor="Black" />
+
+                <Entry x:Name="TxtName" Placeholder="Nombre Completo" TextTransform="Lowercase" FontSize="Large" TextColor="Black" />
+
+                <Entry x:Name="TxtId" Placeholder="Cedula" TextTransform="Lowercase" FontSize="Large" TextColor="Black" />
+
+                <Entry x:Name="TxtNumber" Placeholder="Número Teléfono" Keyboard="Numeric" TextTransform="Lowercase" FontSize="Large" TextColor="Black" />
+
+                <Entry x:Name="TxtEmail" Placeholder="Email" Keyboard="Email" TextTransform="Lowercase" FontSize="Large" TextColor="Black" />
+
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Entry x:Name="TxtPassword" WidthRequest="280" Placeholder="Contraseña" FontSize="Large" TextColor="Black" IsPassword="true" />
+
+                    <Switch x:Name="VerPass" IsToggled="False" Toggled="CmdSeePassword"/>
+                </StackLayout>
+
+                <Entry x:Name="TxtDireccion" Placeholder="Direccion" TextTransform="Lowercase" FontSize="Large" TextColor="Black" />
+
+                <Picker x:Name="CboTipoUsuario" Title="Tipo Usuario" TextColor="Black" ItemsSource="{Binding TipoUsuario}"  ItemDisplayBinding="{Binding Descripcion}" >
+
+                </Picker>
+
+            </StackLayout>
+
+            <FlexLayout>
+
+                <StackLayout Padding="15,50,50,20" Spacing="10" Orientation="Horizontal" HorizontalOptions="Fill" VerticalOptions="Center">
+
+                    <Button x:Name="BtnRegister" WidthRequest="180" VerticalOptions="Center" Text="Guardar" CornerRadius="50"  BackgroundColor="Green" FontSize="Medium" BorderColor="Black" BorderWidth="1" Clicked="CmdUserRegister"/>
+
+                    <Button x:Name="BtnCancel" WidthRequest="180" VerticalOptions="Center" Text="Cancelar" CornerRadius="50"  BackgroundColor="Green" FontSize="Medium" BorderColor="Black" BorderWidth="1" Clicked="CmdCancel"/>
+                </StackLayout>
+            </FlexLayout>
+           
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

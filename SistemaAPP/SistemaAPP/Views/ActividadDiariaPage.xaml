@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistemaAPP.Views.ActividadDiariaPage">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Padding="30,0,30,00" VerticalOptions="Center">
+
+                <Entry x:Name="TxtHoraENtrada" Keyboard="Numeric" Placeholder="Hora Entrada" TextTransform="Lowercase" FontSize="Large" TextColor="Black" />
+
+                <Entry x:Name="TxtHoraSalida" Keyboard="Numeric" Placeholder="Hora Salida" TextTransform="Lowercase" FontSize="Large" TextColor="Black" />
+
+                <Entry x:Name="TxtLugar" Placeholder="Lugar" Keyboard="Text" TextTransform="Lowercase" FontSize="Large" TextColor="Black" />
+
+                <Entry x:Name="TxtDescripcion" Placeholder="Descripcion" Keyboard="Text" TextTransform="Lowercase" FontSize="Large" TextColor="Black" />
+
+                <Picker x:Name="CboTipoActividad" Title="Tipo Actividad" TextColor="Black" ItemsSource="{Binding Actividad}" ItemDisplayBinding="{Binding Descripcion}">
+ 
+                </Picker>
+                <Picker x:Name="CboGastoDiario" Title="Gasto Diario" TextColor="Black" ItemsSource="{Binding GastoDiario}" ItemDisplayBinding="{Binding Descripcion}" >
+
+                </Picker>
+                <Picker x:Name="CboVehiculo" Title="Tipo Vehiculo" TextColor="Black" ItemsSource="{Binding Vehiculo}" ItemDisplayBinding="{Binding Marca}">
+
+                </Picker>
+
+            </StackLayout>
+
+            <FlexLayout>
+
+                <StackLayout Padding="110,20,90,90" Spacing="20" Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Center">
+
+                    <Button x:Name="BtnAdd" WidthRequest="180" VerticalOptions="Center" Text="Guardar" CornerRadius="50"  BackgroundColor="Green" FontSize="Medium" BorderColor="Black" BorderWidth="1" Clicked="BtnAdd_Clicked"/>
+
+                    <Button x:Name="BtnGasto" WidthRequest="180" VerticalOptions="Center" Text="Ingresar Gasto" CornerRadius="50"  BackgroundColor="Green" FontSize="Medium" BorderColor="Black" BorderWidth="1" Clicked="BtnGasto_Clicked"/>
+
+                    <Button x:Name="BtnListar" WidthRequest="180" VerticalOptions="Center" Text="Listar" CornerRadius="50"  BackgroundColor="Green" FontSize="Medium" BorderColor="Black" BorderWidth="1" Clicked="BtnListar_Clicked"/>
+
+                    <Button x:Name="BtnCancelar" WidthRequest="180" VerticalOptions="Center" Text="Cancelar" CornerRadius="50"  BackgroundColor="Green" FontSize="Medium" BorderColor="Black" BorderWidth="1" Clicked="BtnCancelar_Clicked"/>
+                </StackLayout>
+
+
+
+            </FlexLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
